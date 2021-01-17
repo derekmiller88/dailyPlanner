@@ -1,6 +1,6 @@
 # Work Day Scheduler
 
-![Work Day Scheduler screenshot](/assets/images/codeQuizScreenshot.jpg?raw=true "Work Day Scheduler screenshot")
+![Work Day Scheduler screenshot](/Develop/dailyPlanner.jpg?raw=true "Work Day Scheduler screenshot")
 
 ## Work Day Scheduler is a javascript-enabled quiz that was built using HTML, CSS, and Javascript. 
 
