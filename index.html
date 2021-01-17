@@ -31,163 +31,64 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row">
-        <div class="hour">
-          <p>9AM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text9AM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn9am">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>10AM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text10AM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn10am">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>11AM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text11AM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn11am">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>12PM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text12PM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn12pm">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>1PM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text1PM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn1pm">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>2PM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text2PM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn2pm">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>3PM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text3PM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn3pm">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>4PM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text4PM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn4pm">Save</button>
-      </div>
-      <div class="row">
-        <div class="hour">
-          <p>5PM</p>
-        </div>
-        <div class="time-block">
-          <textarea id="text5PM"></textarea>
-        </div>
-        <button type="button" class="saveBtn" id="btn5pm">Save</button>
-      </div>
-    </div>
+      <!-- 9am Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">9AM</div>
+            <textarea id="txt9" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn9am"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 10am Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">10AM</div>
+            <textarea id="txt10" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn10am"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 11am Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">11AM</div>
+            <textarea id="txt11" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn11am"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 12pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">12PM</div>
+            <textarea id="txt12" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn12pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 1pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">1PM</div>
+            <textarea id="txt13" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn1pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 2pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">2PM</div>
+            <textarea id="txt14" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn2pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 3pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">3PM</div>
+            <textarea id="txt15" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn3pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 4pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">4PM</div>
+            <textarea id="txt16" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn4pm"><i class="fas fa-save"></i></button>
+      </li>
+      <!-- 5pm Time Block -->
+      <li class="row time-block">
+        <div class="col-1 hour">5PM</div>
+            <textarea id="txt17" class="col-10" placeholder="Nothing scheduled"></textarea>
+          <button type="submit" class="col-1 btn p-0 saveBtn" id="btn5pm"><i class="fas fa-save"></i></button>
+      </li>
+
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script>
-      var today = moment().format("dddd, MMMM Do YYYY")
-      document.getElementById("currentDay").innerHTML = today;
-
-      /* Start section to save text input into local storage */
-      var btn9am = document.querySelector("#btn9am");
-      var btn10am = document.querySelector("#btn10am");
-      var btn11am = document.querySelector("#btn11am");
-      var btn12pm = document.querySelector("#btn12pm");
-      var btn1pm = document.querySelector("#btn1pm");
-      var btn2pm = document.querySelector("#btn2pm");
-      var btn3pm = document.querySelector("#btn3pm");
-      var btn4pm = document.querySelector("#btn4pm");
-      var btn5pm = document.querySelector("#btn5pm");
-
-      var item9AM = document.querySelector("#text9AM").value;
-      var item10AM = document.querySelector("#text10AM").value;
-      var item11AM = document.querySelector("#text11AM").value;
-      var item12PM = document.querySelector("#text12PM").value;
-      var item1PM = document.querySelector("#text1PM").value;
-      var item2PM = document.querySelector("#text2PM").value;
-      var item3PM = document.querySelector("#text3PM").value;
-      var item4PM = document.querySelector("#text4PM").value;
-      var item5PM = document.querySelector("#text5PM").value;
-
-      document.getElementById("text9AM").innerHTML = localStorage.getItem('9amValue');
-      item9AM.textContent = localStorage.getItem('9amValue');
-      item10AM.textContent = localStorage.getItem('10amValue');
-      item11AM.textContent = localStorage.getItem('11amValue');
-      item12PM.textContent = localStorage.getItem('12pmValue');
-      item1PM.textContent = localStorage.getItem('1pmValue');
-      item2PM.textContent = localStorage.getItem('2pmValue');
-      item3PM.textContent = localStorage.getItem('3pmValue');
-      item4PM.textContent = localStorage.getItem('4pmValue');
-      item5PM.textContent = localStorage.getItem('5pmValue');
-
-      btn9am.addEventListener('click', function(event) {
-        
-        localStorage.setItem('9amValue', item9AM);
-      });
-      btn10am.addEventListener('click', function(event) {
-        
-        localStorage.setItem('10amValue', item10AM);
-      });
-      btn11am.addEventListener('click', function(event) {
-        
-        localStorage.setItem('11amValue', item11AM);
-      });
-      btn12pm.addEventListener('click', function(event) {
-        
-        localStorage.setItem('12pmValue', item12PM);
-      });
-      btn1pm.addEventListener('click', function(event) {
-        
-        localStorage.setItem('1pmValue', item1PM);
-      });
-      btn2pm.addEventListener('click', function(event) {
-        
-        localStorage.setItem('2pmValue', item2PM);
-      });
-      btn3pm.addEventListener('click', function(event) {
-        
-        localStorage.setItem('3pmValue', item3PM);
-      });
-      btn4pm.addEventListener('click', function(event) {
-        
-        localStorage.setItem('4pmValue', item4PM);
-      });
-      btn5pm.addEventListener('click', function(event) {
-        
-        localStorage.setItem('5pmValue', item5PM);
-      });
-    </script>
+    <script src="./Develop/js/script.js"></script>
   </body>
 </html>
