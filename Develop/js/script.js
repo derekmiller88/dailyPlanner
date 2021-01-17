@@ -17,6 +17,7 @@ function displayDay() {
     var element16 = document.getElementById("txt16");
     var element17 = document.getElementById("txt17");
 
+    /* if else loops are used to determine what class is added to the element */
     if (now < '09:00am') {
         element9.classList.add("future");
     } else if (now > '09:00am' && now < '10:00am') {
@@ -84,6 +85,7 @@ function displayDay() {
 
 };
 
+/* runs the function that changes the element's color */
 displayDay();
 
 /* runs the display day function every 1 min */
