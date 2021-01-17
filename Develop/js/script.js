@@ -4,7 +4,7 @@ document.getElementById("currentDay").innerHTML = today;
 /* displayDay() function designed to update color for each hourly task
 based on what time of day it is */
 function displayDay() {
-    var now = moment().format("h:mma");
+    var now = moment().format("hh:mma");
     console.log(now);
 
     var element9 = document.getElementById("txt9");
